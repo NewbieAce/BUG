@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bug统计</title>
+<link rel="stylesheet" href="../css/nor_stat.css" />
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="../js/jquery.easydrag.handler.beta2.js" type="text/javascript"></script>
+<script src="../js/chart.js"></script>
+<link rel="stylesheet"href="../css/bootstrap.min.css" />
+<script type="text/javascript">
+$(document).ready(function(){
+	  $('.post').click(function(){
+	  	 $('.post_ul').show();
+		  });
+	   $('.close').click(function(){
+		  $('.post_ul').hide();
+		  });
+	   $('.post_ul').easydrag();
+	     });
+</script>
+</head>
+
+<body>
+<div id="wrap">
+  <div id="head"> <img src="../img/error.png"/> <span>欢迎您：夏诗涵<font>(普通用户)</font> <img alt="对不起，您的浏览器无法加载此图片！" src="../img/post.png"  class="post"/> </span>
+    <button type="button"class="btn btn-link" id="head_btn">
+    <a href="">退出</a>
+    </button>
+  </div>
+  <div class="post_ul"> <img src="../img/close.png" class="close"/>
+    <ul id="ul_remind">
+      <li> 000流程管理测试<br />
+        [所有项目] 流程测试 - 2015-11-25 16:00 </li>
+      <hr style="border-top:1px ridge #F99;"/>
+      <li>1111<br />
+        [所有项目] 流程测试 - 2015-11-25 16:01 </li>
+      <hr style="border-top:1px ridge #F99;"/>
+      <li>客户端没响应<br />
+        [所有项目] 新加的项目 - 2015-11-18 14:35 </li>
+      <hr style="border-top:1px ridge #F99;"/>
+      <li>打开页面浏览器崩溃<br />
+        [所有项目] 新加的项目 - 2015-11-25 11:29 </li>
+      <hr style="border-top:1px ridge #F99;"/>
+    </ul>
+  </div>
+  <div id="middle">
+    <ul class="nav nav-tabs">
+      <li><a href="normal_view.html">主视图</a></li>
+      <li><a href="normal_data.html">个人资料</a></li>
+      <li><a href="normal_stat.html">Bug统计</a></li>
+      <li><a href="login.html">注销</a></li>
+    </ul>
+  </div>
+  <div id="foot">
+    <div class="mytitle">
+      <p>&gt;</p>
+      <span>Bug统计</span> </div>
+    <div id="left">
+      <legend id="left_h3">部门每季度Bug完成和未完成个数</legend>
+      <p><img src="../img/stat_yes.png" />&nbsp;完&nbsp;&nbsp;&nbsp;成</p>
+      <p><img src="../img/stat_no.png" />&nbsp;未完成</p>
+      <canvas id="bar" height="300" width="424"> 浏览器不支持canvas! </canvas>
+      <script>		
+                           var barChartData = {
+                              labels : [ "第一季度", "第二季度",	
+                                        "第三季度","第四季度" ],			     
+                               datasets : [ {fillColor : "rgba(1,120,212,0.5)",				
+                                            strokeColor : "rgba(11,120,255,1)",				
+                                            data : [ 35,50,90,65 ]	}, 
+                                          {	
+                                            fillColor : "rgba(108,148,34,0.5)",				
+                                            strokeColor : "rgba(118,148,34,1)",				
+                                            data : [ 40, 19, 9, 27, ]	} ]	};			
+                                            var ctx = document.getElementById("bar").                                            getContext("2d");		
+                                            var myNewChart = new Chart(ctx).Bar(barChartData);
+                        </script> 
+    </div>
+    <div id="right"> 
+      <script>  
+					//绘制饼图  
+	            function drawCircle(canvasId, data_arr, color_arr, text_arr)  
+					{  
+				    var c = document.getElementById(canvasId);  
+				    var ctx = c.getContext("2d");  
+		            var radius = c.height / 2 - 20; //半径  
+					var ox = radius + 20, oy = radius + 20; //圆心  
+		            var width = 30, height = 10; //图例宽和高  
+					var posX = ox * 2 + 20, posY = 30;   //  
+					var textX = posX + width + 5, textY = posY + 10;  
+		            var startAngle = 0; //起始弧度  
+					var endAngle = 0;   //结束弧度  
+					for (var i = 0; i < data_arr.length; i++)  
+					{  
+						//绘制饼图  
+						endAngle = endAngle + data_arr[i] * Math.PI * 2; //结束弧度  
+						ctx.fillStyle = color_arr[i];  
+						ctx.beginPath();  
+						ctx.moveTo(ox, oy); //移动到到圆心  
+						ctx.arc(ox, oy, radius, startAngle, endAngle, false);  
+						ctx.closePath();  
+						ctx.fill();  
+						startAngle = endAngle; //设置起始弧度  
+	  
+						//绘制比例图及文字  
+						ctx.fillStyle = color_arr[i];  
+						ctx.fillRect(posX, posY + 20 * i, width, height);  
+						ctx.moveTo(posX, posY + 20 * i);  
+						ctx.font = 'bold 12px 微软雅黑';    //斜体 30像素 微软雅黑字体  
+						ctx.fillStyle = color_arr[i]; //"#000000";  
+						var percent = text_arr[i] + "：" + 100 * data_arr[i] + "%";  
+						ctx.fillText(percent, textX, textY + 20 * i);  
+						}  
+					}  
+		  
+					function init() {  
+						//绘制饼图  
+						//比例数据和颜色  
+						var data_arr = [0.05, 0.15, 0.12, 0.32,0.1,0.26];  
+						var color_arr = ["#4294A8", "#6D578F", "#89A14E", 
+						                 "#AB423F","#446FA5","#90C0D1"];  
+						var text_arr = ["财政部", "人力部", "市场部","生产部", "信息部", "证券部"];                       drawCircle("canvas_circle", data_arr, color_arr, text_arr);}  
+		               //页面加载时执行init()函数  
+					window.onload = init;  
+			  </script>
+      <h3 id="right_h3">年度各部门Bug处理率</h3>
+      <p id="circle">
+        <canvas id="canvas_circle" width="424" height="300" > 浏览器不支持canvas! </canvas>
+      </p>
+    </div>
+  </div>
+</div>
+< 
+<script src="../js/Bootstrap v3.2.0.js"></script>
+</body>
+</html>

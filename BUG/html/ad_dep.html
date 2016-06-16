@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的部门</title>
+<link rel="stylesheet" href="../css/ad_dep.css" />
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="../js/jquery.easydrag.handler.beta2.js" type="text/javascript"></script>
+<link rel="stylesheet"href="../css/bootstrap.min.css" />
+</head>
+
+<body>
+<div id="wrap">
+  <div id="head"> <img src="../img/error.png"/> <span>欢迎您：唐宇<font>(普通管理员)</font> <img alt="对不起，您的浏览器无法加载此图片！" src="../img/post.png"  class="post"/> </span>
+    <button type="button"class="btn btn-link" id="head_btn">
+    <a href="">退出</a>
+    </button>
+  </div>
+  <div class="post_ul"> <img src="../img/close.png" class="close"/>
+    <ul id="ul_remind">
+      <li> 000流程管理测试<br />
+        [所有项目] 流程测试 - 2015-11-25 16:00 </li>
+      <hr style="border-top:1px ridge #F99;"/>
+      <li>1111<br />
+        [所有项目] 流程测试 - 2015-11-25 16:01 </li>
+      <hr style="border-top:1px ridge #F99;"/>
+      <li>客户端没响应<br />
+        [所有项目] 新加的项目 - 2015-11-18 14:35 </li>
+      <hr style="border-top:1px ridge #F99;"/>
+      <li>打开页面浏览器崩溃<br />
+        [所有项目] 新加的项目 - 2015-11-25 11:29 </li>
+      <hr style="border-top:1px ridge #F99;"/>
+    </ul>
+  </div>
+  <div id="middle">
+    <ul class="nav nav-tabs">
+      <li><a href="ad_view.html">主视图</a></li>
+      <li><a href="ad_dep.html">我的部门</a></li>
+      <li><a href="ad_manage.html">人员管理</a></li>
+      <li><a href="ad_data.html">个人资料</a></li>
+      <li><a href="ad_stat.html">Bug统计</a></li>
+      <li><a href="login.html">注销</a></li>
+    </ul>
+  </div>
+  <div id="foot">
+    <div class="mytitle">
+      <p>&gt;</p>
+      <span>我的部门</span> </div>
+    <div id="down">
+      <div id="left">
+        <ul id="left_name">
+          <li>部</li>
+          <li>门</li>
+          <li>信</li>
+          <li>息</li>
+        </ul>
+      </div>
+      <div id="right">
+        <table id="tab"class="table">
+          <tr style="height:37px;background:#F96;font-size:18px;">
+            <td style="width:100px;text-align:center;"> 部门成员 </td>
+            <td style="width:454px;"> 工号 </td>
+            <td style="width:120px;text-align:center;"> 已分配任务 </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"> 李宗华 </td>
+            <td> 13025001 </td>
+            <td style="width:120px;height:37px;text-align:center;"><span data-toggle="modal" data-target="#mymodal-data">3</span>
+              <div class="modal" id="mymodal-data" tabindex="-1" role="dialog" 
+                                   aria-labelledby="mySmallModalLabel"aria-hidden="true">
+                <div class="modal_header">
+                  <button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">&times;</span> <span class="sr-only">Close</span></button>
+                </div>
+                <div class="modal_body">
+                  <p id="job_title">李宗华任务详情</p>
+                  <span><a href=""id="job_a">添加任务</a>&nbsp; <a href="" id="job_b">删除任务</a> </span>
+                  <table id="job_tab">
+                    <tr>
+                      <td>UL界面格式错误</td>
+                      <td>2015.11.01</td>
+                    <tr>
+                    <tr>
+                      <td>系统崩溃</td>
+                      <td>2015.11.06</td>
+                    <tr>
+                    <tr>
+                      <td>BUG1</td>
+                      <td>2015.11.19</td>
+                    <tr>
+                    <tr>
+                      <td>BUG2</td>
+                      <td>2015.11.24</td>
+                    <tr>
+                  </table>
+                </div>
+                <div class="modal_footer"id="modal_footer">&nbsp;
+                  <button type="button" class="btn btn-default" data-dismiss="modal"> 关闭</button>
+                  &nbsp;&nbsp;&nbsp;
+                  <button type="button" class="btn btn-primary">保存</button>
+                  &nbsp;&nbsp;&nbsp; </div>
+              </div></td>
+          </tr>
+          <tr style="height:37px;background:#FFD6C2">
+            <td style="text-align:center;"> 陈珍珍 </td>
+            <td> 13025002 </td>
+            <td style="text-align:center;"> 2 </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"> 夏诗涵 </td>
+            <td> 13025003 </td>
+            <td style="text-align:center;"> 0 </td>
+          </tr>
+          <tr style="height:37px;background:#FFD6C2;">
+            <td style="text-align:center;"> 楚梦瑶 </td>
+            <td> 13025004 </td>
+            <td style="text-align:center;"> 0 </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"> 楚雅柔 </td>
+            <td> 13025005 </td>
+            <td style="text-align:center;"> 6 </td>
+          </tr>
+          <tr style="height:37px;background:#FFD6C2;">
+            <td style="text-align:center;"> 贾淑奇 </td>
+            <td> 13025006 </td>
+            <td style="text-align:center;"> 0 </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"> 卫前晞 </td>
+            <td> 13025007 </td>
+            <td style="text-align:center;"> 3 </td>
+          </tr>
+          <tr style="height:37px;background:#FFD6C2;">
+            <td style="text-align:center;"> 单世达 </td>
+            <td> 13025008 </td>
+            <td style="text-align:center;"> 1 </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"> 谢&nbsp;&nbsp;&nbsp;茹 </td>
+            <td> 13025009 </td>
+            <td style="text-align:center;"> 4 </td>
+          </tr>
+          <tr style="height:37px;background:#FFD6C2">
+            <td style="text-align:center;"> 王家峰 </td>
+            <td> 13025010 </td>
+            <td style="text-align:center;"> 6 </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.post').click(function(){
+		$('.post_ul').show();
+		});
+	$('.close').click(function(){
+		$('.post_ul').hide();
+		});
+	$('.post_ul').easydrag();
+	});
+</script> 
+<script src="../js/Bootstrap v3.2.0.js"></script>
+</body>
+</html>

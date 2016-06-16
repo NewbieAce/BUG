@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>人员管理</title>
+<link rel="stylesheet" href="../css/sp_manage.css" />
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="../js/jquery.easydrag.handler.beta2.js" type="text/javascript"></script>
+<link rel="stylesheet"href="../css/bootstrap.min.css" />
+</head>
+
+<body>
+<div id="wrap">
+  <div id="head"> <img src="../img/error.png"/> <span>欢迎您：曹雨田<font>(超级管理员)</font> <img alt="对不起，您的浏览器无法加载此图片！" src="../img/post.png"  class="post"/> </span>
+    <button type="button"class="btn btn-link" id="head_btn">
+    <a href="">退出</a>
+    </button>
+  </div>
+  <div class="post_ul"> <img src="../img/close.png" class="close"/>
+    <ul id="ul_remind">
+      <li> 000流程管理测试<br />
+        [所有项目] 流程测试 - 2015-11-25 16:00 </li>
+      <hr style="border-top:1px ridge #F99;"/>
+      <li>1111<br />
+        [所有项目] 流程测试 - 2015-11-25 16:01 </li>
+      <hr style="border-top:1px ridge #F99;"/>
+      <li>客户端没响应<br />
+        [所有项目] 新加的项目 - 2015-11-18 14:35 </li>
+      <hr style="border-top:1px ridge #F99;"/>
+      <li>打开页面浏览器崩溃<br />
+        [所有项目] 新加的项目 - 2015-11-25 11:29 </li>
+      <hr style="border-top:1px ridge #F99;"/>
+    </ul>
+  </div>
+  <div id="middle">
+    <ul class="nav nav-tabs">
+      <li><a href="super_view.html">我的视图</a></li>
+      <li><a href="super_add.html">新增Bug</a></li>
+      <li><a href="super_manage.html">人员管理</a></li>
+      <li><a href="super_data.html">个人资料</a></li>
+      <li><a href="super_stat.html">Bug统计</a></li>
+      <li><a href="login.html">注销</a></li>
+    </ul>
+  </div>
+  <div id="foot">
+    <div class="mytitle">
+      <p>&gt;</p>
+      <span>人员管理</span> </div>
+    <div id="down">
+      <div id="left">
+        <ul class="list-unstyled">
+          <li>
+            <label data-toggle="modal"
+                                data-target="#mymodal-data"><img src="../img/adda.png" id="img"/> </label>
+            <div class="modal" id="mymodal-data" tabindex="-1" role="dialog" 
+                                        aria-labelledby="mySmallModalLabel"aria-hidden="true">
+              <div class="modal_header">
+                <button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">&times;</span> <span class="sr-only">Close</span></button>
+              </div>
+              <div class="modal_body">
+                <table id="mymodal_table">
+                  <thead style="background:#F96">
+                    <tr id="mymodal_th">
+                      <th style="height:37px;width:90px;"></th>
+                      <th style="width:90px;text-align:center;">姓名</th>
+                      <th style="width:90px;text-align:center;">工号</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="height:37px">
+                      <td><input type="checkbox" name="list"></td>
+                      <td>张三</td>
+                      <td>12033001</td>
+                    </tr>
+                    <tr style="background:#FFD6C2">
+                      <td><input type="checkbox" name="list"></td>
+                      <td>王雪</td>
+                      <td>12033002</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="list"></td>
+                      <td>李珊</td>
+                      <td>12033003</td>
+                    </tr>
+                    <tr style="background:#FFD6C2">
+                      <td><input type="checkbox" name="list"></td>
+                      <td>王尚</td>
+                      <td>12033004</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="list"></td>
+                      <td>曹慧宇</td>
+                      <td>12033005</td>
+                    </tr>
+                    <tr style="background:#FFD6C2">
+                      <td><input type="checkbox" name="list"></td>
+                      <td>石婷婷</td>
+                      <td>12033006</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="list"></td>
+                      <td>秦海</td>
+                      <td>12033007</td>
+                    </tr>
+                    <tr style="background:#FFD6C2">
+                      <td><input type="checkbox" name="list"></td>
+                      <td>杨洋</td>
+                      <td>12033008</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="list"></td>
+                      <td>冯珊珊</td>
+                      <td>12033009</td>
+                    </tr>
+                    <tr style="background:#FFD6C2">
+                      <td><input type="checkbox" name="list"></td>
+                      <td>杜维佳</td>
+                      <td>12033010</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="list"></td>
+                      <td>吴用</td>
+                      <td>12033011</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr  style="height:60px;background:#FFD6C2"id="mymodal_tfoot">
+                      <td><input type="checkbox"name="all_list" 
+                                                              onclick="selectAll()">
+                        <span>全选</span></td>
+                      <td><button id="tfoot_btn">确认添加</button></td>
+                      <td><button id="tfoot_btn">取消</button></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <script type="text/javascript">
+												function selectAll(){
+													var all_list = document.getElementsByName("all_list")[0];
+													var list = document.getElementsByName("list");
+												 if(all_list.checked){
+													for(var i = 0; i < list.length; i++){
+													list[i].checked = true;
+													}
+												 return true;
+												 }else{
+													for(var i = 0; i < list.length; i++){
+													list[i].checked = false;
+													}
+												return false;
+													}
+												var tagName = document.getElementsByTagName("input");
+												  for(var i = 0; i < list.length; i++){
+												  alert(tagName[i].type);
+												 }
+												 }
+											</script> 
+            </div>
+          </li>
+          <li>添加</li>
+          <li>管理员</li>
+        </ul>
+        <ul class="list-unstyled">
+          <li> <img src="../img/adda.png" id="img"/> </li>
+          <li>添加</li>
+          <li>普通用户</li>
+        </ul>
+      </div>
+      <div id="right">
+        <table class="table">
+          <tr id="th" style="background:#00CCCD">
+            <td style="width:130px;">姓名</td>
+            <td style="width:130px">工号</td>
+            <td style="width:130px">部门</td>
+            <td style="width:200px"></td>
+            <td colspan="2">操作</td>
+            <td style="width:20px"></td>
+          </tr>
+          <tr>
+            <td id="name"style="height:37px;">张三</td>
+            <td id="num">12033001</td>
+            <td id="dep">人力部</td>
+            <td></td>
+            <td style="width:100px"><button class="btn btn1">编辑</button></td>
+            <td style="width:100px"><button class="btn btn2">删除</button></td>
+            <td></td>
+          </tr>
+          <tr style="background:#99EBFF">
+            <td id="name">王雪</td>
+            <td id="num">12033002</td>
+            <td id="dep">信息部</td>
+            <td></td>
+            <td><button class="btn btn1">编辑</button></td>
+            <td><button class="btn btn2">删除</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td id="name">李珊</td>
+            <td id="num">12033003</td>
+            <td id="dep">市场部</td>
+            <td></td>
+            <td><button class="btn btn1">编辑</button></td>
+            <td><button class="btn btn2">删除</button></td>
+            <td></td>
+          </tr>
+          <tr style="background:#99EBFF">
+            <td id="name">王尚</td>
+            <td id="num">12033004</td>
+            <td id="dep">生产部</td>
+            <td></td>
+            <td><button class="btn btn1">编辑</button></td>
+            <td><button class="btn btn2">删除</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td id="name">曹慧宇</td>
+            <td id="num">12033005</td>
+            <td id="dep">人力部</td>
+            <td></td>
+            <td><button class="btn btn1">编辑</button></td>
+            <td><button class="btn btn2">删除</button></td>
+            <td></td>
+          </tr>
+          <tr style="background:#99EBFF">
+            <td id="name">石婷婷</td>
+            <td id="num">12033006</td>
+            <td id="dep">生产部</td>
+            <td></td>
+            <td><button class="btn btn1">编辑</button></td>
+            <td><button class="btn btn2">删除</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td id="name">秦海</td>
+            <td id="num">12033007</td>
+            <td id="dep">证券部</td>
+            <td></td>
+            <td><button class="btn btn1">编辑</button></td>
+            <td><button class="btn btn2">删除</button></td>
+            <td></td>
+          </tr>
+          <tr style="background:#99EBFF">
+            <td id="name">杨洋</td>
+            <td id="num">12033008</td>
+            <td id="dep">证券部</td>
+            <td></td>
+            <td><button class="btn btn1">编辑</button></td>
+            <td><button class="btn btn2">删除</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td id="name">冯珊珊</td>
+            <td id="num">12033009</td>
+            <td id="dep">人力部</td>
+            <td></td>
+            <td><button class="btn btn1">编辑</button></td>
+            <td><button class="btn btn2">删除</button></td>
+            <td></td>
+          </tr>
+          <tr style="background:#99EBFF">
+            <td id="name">杜维佳</td>
+            <td id="num">12033010</td>
+            <td id="dep">信息部</td>
+            <td></td>
+            <td><button class="btn btn1">编辑</button></td>
+            <td><button class="btn btn2">删除</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td id="name">吴用</td>
+            <td id="num">12033011</td>
+            <td id="dep">信息部</td>
+            <td></td>
+            <td><button class="btn btn1">编辑</button></td>
+            <td><button class="btn btn2">删除</button></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.post').click(function(){
+		$('.post_ul').show();
+		});
+	$('.close').click(function(){
+		$('.post_ul').hide();
+		});
+	$('.post_ul').easydrag();
+	});
+</script> 
+<script src="../js/jquery-1.7.1.min.js"></script> 
+<script src="../js/Bootstrap v3.2.0.js"></script>
+</body>
+</html>

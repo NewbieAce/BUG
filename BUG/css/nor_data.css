@@ -1,0 +1,166 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body {
+	margin: 0;
+	padding: 0;
+}
+#wrap {
+	margin: auto;
+	width: 960px;
+}
+#head {
+	margin: auto;
+	width: 100%;
+	height: 130px;
+	background: url(../img/a.png) 0 0 no-repeat;
+}
+#head span {
+	color: #068BCA;
+	position: absolute;
+	left: 63%;
+	top: 17px;
+	padding-right: 10px;
+	border-right: 1px #068BCA solid;
+}
+#head span font {
+	color: red;
+}
+#head_btn {
+	padding-top: 17px;
+	float: right;
+}
+#middle {
+	margin: auto 0;
+	width: 100%;
+	height: 56px;
+	background: url(../img/title.png) 0 0 no-repeat;
+	padding-left: 180px;
+}
+.nav {
+	margin: 0;
+	padding: 0;
+}
+.nav-tabs {
+	margin: 0;
+	padding: 0;
+	font-size: 26px;
+}
+.nav-tabs a {
+	color: white;
+	background: #3491B8;
+	width: 140px;
+	height: 50px;
+	text-align: center;
+}
+#foot {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.mytitle {
+	width: 100%;
+	height: 120px;
+	padding-top: 56px;
+}
+.mytitle p {
+	display: inline;
+	padding: 0;
+	font-size: 38px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	padding-left: 16px;
+}
+.mytitle span {
+	font-size: 28px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+#down {
+	width: 960px;
+	height: 526px;
+}
+#imga {
+	margin: 0;
+	padding: 0;
+	margin-left: 50px;
+	width: 144px;
+	height: 180px;
+}
+#right_al {
+	margin-top: 20px;
+	width: 40%;
+	height: 140px;
+	float: left;
+	margin-bottom: 30px;
+}
+#right_ar {
+	height: 140px;
+	float: right;
+	width: 60%;
+	padding-top: 100px;
+}
+#right_ar span {
+	font-family: "微软雅黑";
+	font-size: 22px;
+	font-weight: 500;
+}
+#right_b {
+	clear: both;
+	height: 360px;
+	width: 100%;
+}
+#table {
+	width: 95%;
+	height: 386px;
+}
+#table label {
+	font-family: "微软雅黑";
+	font-size: 22px;
+	font-weight: 500;
+	padding-left: 60px;
+}
+#table_pad {
+	padding-top: 40px;
+}
+#table input {
+	width: 220px;
+	margin-left: 40px;
+}
+#rebtn {
+	text-align: right;
+	padding-right: 50px;
+	height: 20px;
+	color: green;
+}
+#ul_remind {
+	list-style-type: none;
+	padding: 5px;
+	margin: 0px;
+	background: white;
+	width: 420px;
+	height: 286px;
+	border: black solid 1px;
+	border-radius: 8px;
+}
+#ul_remind li {
+	margin: 5px;
+	color: #FF4A4A;
+	font-family: "Courier New", Courier, monospace;
+	height: 25px;
+}
+.close {
+	float: right;
+}
+.post_ul {
+	display: none;
+	width: 420px;
+	height: 180px;
+	float: right;
+	position: absolute;
+	top: 80px;
+	left: 780px;
+	z-index: 1000;
+}
+#white {
+	position: absolute;
+	left: 40px;
+	top: 500px;
+}

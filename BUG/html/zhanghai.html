@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>张海个人资料</title>
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<link rel="stylesheet"href="../css/bootstrap.min.css" />
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	width: 680px;
+	height: 550px;
+}
+#imga {
+	margin: 0;
+	padding: 0;
+	margin-left: 50px;
+	width: 144px;
+	height: 180px;
+}
+#right_al {
+	margin-top: 20px;
+	width: 40%;
+	height: 140px;
+	float: left;
+	margin-bottom: 30px;
+}
+#right_ar {
+	height: 140px;
+	float: right;
+	width: 60%;
+	padding-top: 100px;
+}
+#right_ar span {
+	font-family: "微软雅黑";
+	font-size: 22px;
+	font-weight: 500;
+}
+#right_b {
+	clear: both;
+	height: 360px;
+}
+#table {
+	width: 95%;
+	height: 386px;
+}
+#table label {
+	font-family: "微软雅黑";
+	font-size: 22px;
+	font-weight: 500;
+	padding-left: 60px;
+}
+#table_pad {
+	padding-top: 40px;
+}
+#table input {
+	width: 220px;
+	margin-left: 40px;
+}
+#rebtn {
+	text-align: right;
+	padding-right: 50px;
+	height: 20px;
+	color: green;
+}
+</style>
+</head>
+
+<body>
+<div id="down">
+  <div id="right_al"> <img src="../img/picboy.jpg" id="imga"alt="对不起，您的浏览器不支持此图片！"/> </div>
+  <div id="right_ar"> <span>姓名:张海</span><br />
+    <span>部门:信息部</span> </div>
+  <div id="right_b">
+    <table id="table">
+      <tr>
+        <td style="width:35%"><label id="table_pad">帐号</label></td>
+        <td><label id="table_pad">cx156</label></td>
+      </tr>
+      <tr>
+        <td><label>密码</label></td>
+        <td><input type="password" /></td>
+      </tr>
+      <tr>
+        <td><label>确认密码</label></td>
+        <td><input type="password" /></td>
+      </tr>
+      <tr>
+        <td><label>Email</label></td>
+        <td><label>xxxxxxxxxx@163.com</label></td>
+      </tr>
+      <tr>
+        <td><label>操作权限</label></td>
+        <td><label>普通用户</label></td>
+      </tr>
+      <tr>
+        <td><label>项目访问级别</label></td>
+        <td><label>普通用户</label></td>
+      </tr>
+      <tr>
+        <td><label>已分配项目</label></td>
+        <td><label>无</label></td>
+      </tr>
+      <tr>
+        <td colspan="2"id="rebtn"><button id="down_wrap"class="btn btn-info"style="border-radius:15px">更新信息</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<script type="text/javascript">
+                    $(function () {
+                           $("#down_wrap").bind("click",function(){
+                                  $("#down").animate({
+                                             width:"2px",
+                                             height:"2px"
+                                                         },
+                                        100)
+						   });
+						   $("#down_wrap").bind("click",function(){		
+                                  $("#down").animate({
+                                                   width:"680px",
+                                                    height:"580px"
+                                                                },
+                                        100)
+						   })
+                                   });
+                  </script>
+</body>
+</html>
